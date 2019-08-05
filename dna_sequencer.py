@@ -1,6 +1,3 @@
-import os as os
-import re as re
-
 gencode =   {'AUA':'I', 'AUC':'I', 'AUU':'I', 'AUG':'M',
     'ACA':'T', 'ACC':'T', 'ACG':'T', 'ACU':'T',
     'AAC':'N', 'AAU':'N', 'AAA':'K', 'AAG':'K',
@@ -28,7 +25,6 @@ dna_comp1 = dna_comp.replace('T','a')
 dna_comp2 = dna_comp1.replace('G','c')
 dna_comp3 = dna_comp2.replace('C','g')
 rna_seq = dna_comp3.upper()
-# print(rna_seq)
 
 last_codon_start = len(rna_seq) - 2
 
@@ -46,5 +42,3 @@ rna_file.close()
 protein_file = open(file + '_protein.txt','w')
 protein_file.write(protein)
 protein_file.close()
-
-
